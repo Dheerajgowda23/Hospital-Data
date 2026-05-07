@@ -1,0 +1,70 @@
+<web-app>
+
+    <servlet>
+
+        <servlet-name>Add</servlet-name>
+
+        <servlet-class>
+            servlet.AddPatientServlet
+        </servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>Add</servlet-name>
+
+        <url-pattern>/add</url-pattern>
+
+    </servlet-mapping>
+
+    <servlet>
+
+        <servlet-name>View</servlet-name>
+
+        <servlet-class>
+            servlet.ViewPatientsServlet
+        </servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>View</servlet-name>
+
+        <url-pattern>/view</url-pattern>
+
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>Delete</servlet-name>
+
+    <servlet-class>
+        servlet.DeletePatientServlet
+    </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>Update</servlet-name>
+
+    <servlet-class>
+        servlet.UpdatePatientServlet
+    </servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+
+        <servlet-name>Update</servlet-name>
+
+        <url-pattern>/update</url-pattern>
+
+    </servlet-mapping>
+
+</web-app>
