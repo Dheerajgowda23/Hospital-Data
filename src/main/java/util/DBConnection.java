@@ -10,9 +10,13 @@ public class DBConnection {
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         return DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/hospitaldb",
-                "root",
-                "root123"
+
+            "jdbc:mysql://yamanote.proxy.rlwy.net:50177/railway?useSSL=false&allowPublicKeyRetrieval=true",
+
+            "root",
+
+            "vlHsLsiTBIaOAejMOgOzYWNEGJCPKTcz"
+
         );
     }
 }

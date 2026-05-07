@@ -109,9 +109,10 @@ public class PatientDAO {
         ps.setInt(4, id);
 
         ps.executeUpdate();
-
+        System.out.println("PATIENT ADDED SUCCESSFULLY");
     } catch(Exception e) {
 
+        System.out.println(e);
         e.printStackTrace();
     }
 }
