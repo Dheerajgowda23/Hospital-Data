@@ -11,11 +11,11 @@ public class DBConnection {
 
         return DriverManager.getConnection(
 
-            "jdbc:mysql://mysql-1a26bd6d-dheerajb262-d588.h.aivencloud.com:19029/defaultdb?sslMode=REQUIRED",
+            System.getenv("DB_URL"),
 
-            "avnadmin",
+            System.getenv("DB_USER"),
 
-            "AVNS_rmy3giD7ynEoHgeN6aT"
+            System.getenv("DB_PASSWORD")
         );
     }
 }
