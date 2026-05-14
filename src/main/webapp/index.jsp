@@ -20,55 +20,55 @@
 
             </h2>
 
-            <form action="<%= request.getContextPath() %>/add" method="post"></form>
+            <form action="<%= request.getContextPath() %>/add" method="post">
 
-            <div class="mb-3">
+                <div class="mb-3">
 
-                <label class="form-label">
+                    <label class="form-label">
 
-                    Name
+                        Name
 
-                </label>
+                    </label>
 
-                <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control">
 
-            </div>
+                </div>
 
-            <div class="mb-3">
+                <div class="mb-3">
 
-                <label class="form-label">
+                    <label class="form-label">
 
-                    Age
+                        Age
 
-                </label>
+                    </label>
 
-                <input type="number" name="age" class="form-control">
+                    <input type="number" name="age" class="form-control">
 
-            </div>
+                </div>
 
-            <div class="mb-3">
+                <div class="mb-3">
 
-                <label class="form-label">
+                    <label class="form-label">
 
-                    Disease
+                        Disease
 
-                </label>
+                    </label>
 
-                <input type="text" name="disease" class="form-control">
+                    <input type="text" name="disease" class="form-control">
 
-            </div>
+                </div>
 
-            <button class="btn btn-primary">
+                <button class="btn btn-primary">
 
-                Add Patient
+                    Add Patient
 
-            </button>
+                </button>
 
-            <a href="view" class="btn btn-success">
+                <a href="view" class="btn btn-success">
 
-                View Patients
+                    View Patients
 
-            </a>
+                </a>
 
             </form>
 

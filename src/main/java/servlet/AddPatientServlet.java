@@ -26,6 +26,7 @@ public class AddPatientServlet extends HttpServlet {
             dao.addPatient(name, age, disease);
 
             res.sendRedirect("view");
+            res.sendRedirect(req.getContextPath() + "/view");
 
         } catch (Exception e) {
             e.printStackTrace();
