@@ -29,7 +29,7 @@ public class ViewPatientsServlet
         );
 
         RequestDispatcher rd =
-                req.getRequestDispatcher("view.jsp");
+                req.getRequestDispatcher("/view.jsp");
 
         rd.forward(req, res);
     }
