@@ -11,12 +11,11 @@ public class DBConnection {
 
         return DriverManager.getConnection(
 
-            "jdbc:mysql://yamanote.proxy.rlwy.net:50177/railway?useSSL=false&allowPublicKeyRetrieval=true",
+            "jdbc:mysql://mysql-1a26bd6d-dheerajb262-d588.h.aivencloud.com:19029/defaultdb?sslMode=REQUIRED",
 
-            "root",
+            "avnadmin",
 
-            "vlHsLsiTBIaOAejMOgOzYWNEGJCPKTcz"
-
+            "AVNS_rmy3giD7ynEoHgeN6aT"
         );
     }
 }
