@@ -1,14 +1,17 @@
 package servlet;
 
-import dao.PatientDAO;
-import model.Patient;
-
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-
 import java.io.IOException;
 import java.util.List;
 
+import dao.PatientDAO;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import model.Patient;
+@WebServlet("/view")
 public class ViewPatientsServlet
         extends HttpServlet {
 
