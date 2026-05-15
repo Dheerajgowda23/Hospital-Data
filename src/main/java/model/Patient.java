@@ -2,23 +2,50 @@ package model;
 
 public class Patient {
 
-    public int patientId;
+    private int id;
+    private String name;
+    private int age;
+    private String disease;
 
-    public String name;
+    public Patient() {
+    }
 
-    public int age;
-
-    public String disease;
-
-    public Patient(
-            int patientId,
-            String name,
-            int age,
-            String disease) {
-
-        this.patientId = patientId;
+    public Patient(int id, String name, int age, String disease) {
+        this.id = id;
         this.name = name;
         this.age = age;
+        this.disease = disease;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getDisease() {
+        return disease;
+    }
+
+    public void setDisease(String disease) {
         this.disease = disease;
     }
 }
