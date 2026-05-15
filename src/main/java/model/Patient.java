@@ -1,14 +1,12 @@
 package model;
 
 public class Patient {
-
     private int id;
     private String name;
     private int age;
     private String disease;
 
-    public Patient() {
-    }
+    public Patient() {}
 
     public Patient(int id, String name, int age, String disease) {
         this.id = id;

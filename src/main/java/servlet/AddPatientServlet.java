@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 
 import dao.PatientDAO;
+import model.Patient;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,25 +12,24 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/add")
 public class AddPatientServlet extends HttpServlet {
+    private PatientDAO dao = new PatientDAO();
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        String name = req.getParameter("name");
+        int age = Integer.parseInt(req.getParameter("age"));
+        String disease = req.getParameter("disease");
+
+        Patient p = new Patient(0, name, age, disease);
 
         try {
-
-            String name = req.getParameter("name");
-            int age = Integer.parseInt(req.getParameter("age"));
-            String disease = req.getParameter("disease");
-
-            PatientDAO dao = new PatientDAO();
-
-            dao.addPatient(name, age, disease);
-
-            res.sendRedirect("view");
-            res.sendRedirect(req.getContextPath() + "/view");
-
+            dao.addPatient(p);
+            req.getSession().setAttribute("success", "Patient added successfully!");
         } catch (Exception e) {
+            req.getSession().setAttribute("error", "Error adding patient: " + e.getMessage());
             e.printStackTrace();
         }
+
+        res.sendRedirect("view");
     }
 }
